@@ -1,4 +1,4 @@
-
+#### _Nec_ sınıfının tanımımnda sentaks hatası oluşturan bildirimleri işaretleyiniz.
 
 ```
 class Erg;

@@ -1,4 +1,4 @@
-
+#### Mark the syntax errors, if any, in the following code sections
 ```
 namespace nec {
 	class A {

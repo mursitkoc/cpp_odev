@@ -47,7 +47,7 @@ Formatlama: `gg/aa/yyyy` (ayıraç olarak istenilen bir karakter kullanılabilir
 * Gerekli görürseniz sınıfın `public` arayüzünde değişiklikler yapabilirsiniz.
 * Sınıfın `public` öğelerinin isimlerini istediğiniz şekilde değiştirebilirsiniz.
 * Dilediğiniz işlevleri `"constexpr"` yapabilirsiniz.
-* Bu ödevde `"exception handling"` araçlarını kullanmayacağız. (`exception handling` konusunu gördükten sonra kodlarda değişiklik yapacağız.)
+* Bu ödevde `"exception handling"` araçlarını kullanmayacağız. (`exception handling` konusunu gördükten sonra kodlarda değişiklik yapacağız.) Fonksiyonlara gönderilen argümanların uygun ve doğru değerler olduğunu varsayabilirsiniz. 
 * Kod tekrarından mümkün olduğu kadar kaçınmalısınız.
 * `const` doğruluğuna `(const correctness)` çok dikkat etmelisiniz. `(const olması gereken tüm varlıklar const olmalı)`
 * Gereksiz yorum satırlarından mümkün olduğu kadar kaçınmalısınız.

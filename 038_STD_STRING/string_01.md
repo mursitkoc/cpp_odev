@@ -68,3 +68,82 @@ int main()
 
 
 ```
+```
+//13.
+#include <string>
+#include <iostream>
+
+void print(const std::string& s)
+{
+	std::cout << "'" << s << "' [" << s.length() << "]\n";
+}
+
+int main()
+{
+	std::string s{ "aslan kan sever kan olmazsa et sever kan olmasa bir et yer" };
+
+	print(s);
+	s.erase(s.rfind("kan"),3);
+	print(s);
+}
+```
+```
+//14.
+#include <string>
+#include <iostream>
+
+void print(const std::string& s)
+{
+	std::cout << "'" << s << "' [" << s.length() << "]\n";
+}
+
+int main()
+{
+	std::string s{ "aslan kan sever kan olmazsa et sever kan olmasa bir et yer" };
+
+	print(s);
+	while (s.npos != s.find("kan"))
+	{
+		s.erase(s.find("kan"), 3);
+	}
+	print(s);
+}
+```
+```
+//15.
+#include <string>
+#include <iostream>
+
+void print(const std::string& s)
+{
+	std::cout << "'" << s << "' [" << s.length() << "]\n";
+}
+
+int main()
+{
+	std::string s{ "aslan kan sever kan olmazsa 5 et sever kan7 olmasa bir et yer" };
+	
+	print(s);
+	s.erase(s.find_first_of("1234567890"),1);
+	print(s);
+}
+```
+```
+//16. Yazıda bulunan son rakam karakterini silin
+#include <string>
+#include <iostream>
+
+void print(const std::string& s)
+{
+	std::cout << "'" << s << "' [" << s.length() << "]\n";
+}
+
+int main()
+{
+	std::string s{ "aslan kan sever kan olmazsa 5 et sever kan7 olmasa bir et yer" };
+	
+	print(s);
+	s.erase(s.find_last_of("1234567890"),1);
+	print(s);
+}
+```

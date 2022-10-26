@@ -46,3 +46,25 @@ int main()
 
 
 ```
+```
+#include <string>
+#include <iostream>
+
+void print(const std::string& s)
+{
+	std::cout << "'" << s << "' [" << s.length() << "]\n";
+}
+
+int main()
+{
+	std::string s{ "aslan kan sever kan olmazsa et sever kan olmasa bir et yer" };
+
+
+	
+	print(s);
+	//kod
+	print(s);
+}
+
+
+```

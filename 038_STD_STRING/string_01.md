@@ -28,20 +28,21 @@
 #include <string>
 #include <iostream>
 
-void print(const std::string &s)
+void print(const std::string& s)
 {
 	std::cout << "'" << s << "' [" << s.length() << "]\n";
 }
 
 int main()
 {
-	std::string s;
+	std::string s{ "aslan kan sever kan olmazsa et sever kan olmasa bir et yer" };
 
-	std::cout << "bir yazi giriniz: ";
-	std::getline(std::cin, s);
+
+	
 	print(s);
-	///kod
+	//kod
 	print(s);
 }
+
 
 ```

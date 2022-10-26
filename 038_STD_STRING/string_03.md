@@ -33,3 +33,31 @@ işlevin geri dönüş değeri olan string source stringinin başındaki ve sonu
 ```
 
 parantezler yazıya ait değil.
+
+```
+//işlev parametresi ile aldığı yazıdaki
+//
+//küçük harflerin yerinde aynı karakterlerin büyüğü olan
+//büyük harflerin yerinde aynı karakterlerin küçüğü olan
+//bir string döndürecek.
+#include <string>
+#include <iostream>
+#include<cctype>
+
+using namespace std;
+string s{ "mursitKOC" };
+
+std::string opposite_case(std::string& s)
+{
+	for (auto idx = s.begin(); idx <= s.end(); idx++)
+	{
+		isupper(*idx) ? *idx = tolower(*idx) : *idx = toupper(*idx);
+	}
+	return s;
+}
+
+int main()
+{
+	cout << opposite_case(s);
+}
+```

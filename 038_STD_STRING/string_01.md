@@ -147,3 +147,130 @@ int main()
 	print(s);
 }
 ```
+```
+//17.Yazıdaki tüm rakam karakterlerini silin.
+#include <string>
+#include <iostream>
+
+void print(const std::string& s)
+{
+	std::cout << "'" << s << "' [" << s.length() << "]\n";
+}
+
+int main()
+{
+	std::string s{ "aslan kan sever kan olmazsa 5 et sever kan7 olmasa bir et yer" };
+	
+	print(s);
+	while (s.find_first_of("1234567890") != s.npos)
+	{
+		s.erase(s.find_last_of("1234567890"), 1);
+	}
+	print(s);
+}
+```
+```
+//18. Yazının uzunluğu 1'den büyükse ve yazının ilk karakteri ile son karakteri aynı ise bunları silin.
+#include <string>
+#include <iostream>
+
+using namespace std;
+void print(const std::string& s)
+{
+	std::cout << "'" << s << "' [" << s.length() << "]\n";
+}
+//aslan kan sever kan olmazsa 5 et sever kan7 olmasa asla
+int main()
+{
+	std::string s{ "asla" };
+	
+	print(s);
+	
+	if (s.length() > 1 && *(s.begin()) == *(s.end() - 1))
+	{
+		s.pop_back();
+		s.erase(0,1);
+	}
+	print(s);
+}
+```
+```
+//19. Yazının uzunluğu 5'ten büyükse ve yazının ilk *3* 
+//karakteri ile son *3* karakteri aynı ise bunları silin.
+#include <string>
+#include <iostream>
+
+using namespace std;
+void print(const std::string& s)
+{
+	std::cout << "'" << s << "' [" << s.length() << "]\n";
+}
+//aslan kan sever kan olmazsa 5 et sever kan7 olmasa asla
+int main()
+{
+	std::string s{ "asla a asl" };
+	
+	print(s);
+	
+	if (s.substr(0,3)==s.substr(s.size()-3,3))
+	{
+		s.erase(0,3);
+		s.erase(s.size() - 3, 3);
+	}
+	print(s);
+
+}
+```
+```
+//20. Yazıdaki ardışık eşit karakterlerden sadece bir tane kalacak şekilde silme işlemi yapın. *(unique)*
+#include <string>
+#include <iostream>
+#include<algorithm>
+
+using namespace std;
+void print(const std::string& s)
+{
+	std::cout << "'" << s << "' [" << s.length() << "]\n";
+}
+//aslan kan sever kan olmazsa 5 et sever kan7 olmasa asla
+int main()
+{
+	std::string s{ "aassaassaassaassaassaassaassaasshaklakıyesnsjk" };
+	
+	print(s);
+	
+	// remove consecutive (adjacent) duplicates
+	auto last = unique(s.begin(), s.end());
+	// s now holds {1 2 1 3 4 5 4 x x x}, where 'x' is indeterminate
+	s.erase(last, s.end());
+	print(s);
+
+}
+```
+```
+//21. Yazıdaki tüm boşluk (whitespace) karakterlerini silin.
+#include <string>
+#include <iostream>
+#include<algorithm>
+
+using namespace std;
+void print(const std::string& s)
+{
+	std::cout << "'" << s << "' [" << s.length() << "]\n";
+}
+
+int main()
+{
+	std::string s{ "aslan kan sever kan olmazsa 5 et sever kan7 olmasa asla" };
+	
+	print(s);
+
+	for (auto idx = s.begin(); idx < s.end(); ++idx)
+	{
+		if (*idx == ' ')
+			s.erase(idx);
+	}
+
+	print(s);
+}
+```

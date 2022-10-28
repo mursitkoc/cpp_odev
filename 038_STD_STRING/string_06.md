@@ -37,5 +37,33 @@ int main()
 s.insert(0, "X");
 ```
 ```
-
+//02. Yazının sonuna 'X' karakterini ekleyin.
+s.append("X");
+```
+```
+//03. Yazıya 'W' karakterini yazının 3 indeksli karakteri olacak biçimde ekleyin. 
+s.insert(3, "W");
+```
+```
+//04. Yazının başına "kendi isminizi" ekleyin.
+s.insert(0, "mursit");
+```
+```
+//05. Yazının sonuna "kendi isminizi" ekleyin.
+s.append("mursit");
+```
+```
+//06. Yazının sonuna yazının uzunluğunu ekleyin: necati ----> necati6
+s.append( std::to_string(s.size()));
+```
+```
+//07. Yazıda bulunan rakam karakterlerinden bir tane daha ekleyin:   a4b71p9eak23t ----> //a44b7711p99eak2233t
+for (auto idx = s.begin(); idx <= s.end(); ++idx)
+	{
+		if (isdigit(*idx))
+		{
+			s.insert(idx + 1, *idx);
+			++idx;
+		}
+	}
 ```

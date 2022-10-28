@@ -102,3 +102,34 @@ unrecriminative          unrecuperatiness         unrecuperative           unrec
 unrenunciative           unresuscitating          unresuscitative          unspeculating            
 unspeculative            unspeculatively          unverificative
 ```
+```
+//Aşağıdaki listede ingilizce sözcüklerin ortak bir özelliği var : Bu sözcüklerden bazı karakterler silindiğinde geriye benim ismim kalıyor.Böyle bir özelliği test eden bir işlev yazabilir misiniz ?
+//İşlevin birinci parametresi kaynak(uygunluğu test edilecek) string.
+//İşlevin ikinci parametresi silme işleminden sonra geriye kalması gereken string.
+//İşlevin geri dönüş değeri birinci yazıdan karakter silme yoluyla ikinci yazının elde edilip(true) elde edilemeyeceği(false) bilgisi.
+#include <string>
+
+#include <iostream>
+using namespace std;
+string s1{ "counterclassifications   " };
+string s2{ "necati" };
+
+bool is_reachable_to(const std::string& r1, const std::string& r2)
+{
+    static string s3 = r2;
+    auto idx = s3.begin();
+
+    for (auto c : r1)
+    {
+        if (c == *idx)
+            ++idx;
+    }
+
+    return idx == s3.end() ? true : false;
+}
+
+int main()
+{
+    cout << boolalpha << is_reachable_to(s1, s2) << "\n";  
+}
+```

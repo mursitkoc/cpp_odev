@@ -32,3 +32,10 @@ int main()
 }
 
 ```
+```
+//01. Yazının başına 'X' karakterini ekleyin.
+s.insert(0, "X");
+```
+```
+
+```

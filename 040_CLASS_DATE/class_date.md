@@ -3,7 +3,7 @@
 Aşağıda ismi `Date` olan bir sınıfın tanımlandığı başlık dosyası yer almaktadır. 
 Bu ödevde `Date` sınıfının kodlarını yazmanız isteniyor.
 `Date` sınıfı türünden bir nesnenin değeri bir tarihtir. Örnek: `15 Şubat 1998` <br>
-Aşağıdaki açıklamalar kodda bulunan yorum satırlarına ilişkindir:
+Aşağıdaki açıklamalar kodda bulunan yorum satırlarına ilişkindir :
 
 1. Sınıfın hizmet verdiği en küçük yıl değeri
 2. `random_date` işlevinin üreteceği tarih için en küçük yıl değeri
